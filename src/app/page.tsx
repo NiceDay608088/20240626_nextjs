@@ -1,12 +1,16 @@
 "use client";
 
-import { assests } from "@/data/sample-data";
+import { dumyAssests } from "@/data/sample-data";
 import AssetList from "@/components/AssetList";
 import { FaRegMoon } from "react-icons/fa";
 import { ContainerDiv, ThemeDiv } from "./styles";
 import AssetIcon from "@/components/AssetIcon";
+import MyModal from "@/components/MyModal/MyModal";
+import { useState } from "react";
 
 export default function Home() {
+  const [isModalVisible, setModalVisible] = useState(false);
+
   const onDeposit = (id: number) => {
     console.log("...onDeposit...", { id });
   };
@@ -21,10 +25,17 @@ export default function Home() {
         <AssetIcon icon={<FaRegMoon />} />
       </ThemeDiv>
       <AssetList
-        assests={assests}
+        assests={dumyAssests}
         onDeposit={onDeposit}
         onWithdraw={onWithdraw}
       />
+      <button onClick={() => setModalVisible(true)}>Add Asset</button>
+      <MyModal
+        isVisible={isModalVisible}
+        onClose={() => setModalVisible(false)}
+      >
+        <div>hehe</div>
+      </MyModal>
     </ContainerDiv>
   );
 }

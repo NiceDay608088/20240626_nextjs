@@ -1,6 +1,6 @@
 import { IAsset } from "@/types/data-type";
 
-export const assests: IAsset[] = [
+export const dumyAssests: IAsset[] = [
   {
     id: 1,
     imageUrl: "/ust.png",
