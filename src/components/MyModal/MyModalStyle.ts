@@ -18,17 +18,22 @@ export const ModalContainer = styled.div<ModalContainerProps>`
   background-color: rgba(0, 0, 0, 0.4);
 `;
 
-export const ModalBody = styled.div`
+export const ModalContent = styled.div`
   background-color: white;
   position: relative;
+  width: 700px;
+  height: 350px;
+  border-radius: 10px;
+  padding: 10px;
+  padding-top: 40px;
 `;
 
 export const CloseSpan = styled.span`
   position: absolute;
   top: 0px;
-  right: 0px;
-  padding: 6px;
-  font-size: 16px;
+  right: 10px;
+  padding: 10px;
+  font-size: 20px;
   color: #aaaaaa;
   cursor: pointer;
 

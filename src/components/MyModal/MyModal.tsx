@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { CloseSpan, ModalBody, ModalContainer } from "./MyModalStyle";
+import { CloseSpan, ModalContent, ModalContainer } from "./MyModalStyle";
 
 interface MyModalProp {
   children: React.ReactNode;
@@ -12,10 +12,10 @@ interface MyModalProp {
 const MyModal = ({ children, isVisible, onClose }: MyModalProp) => {
   return (
     <ModalContainer $isVisible={isVisible}>
-      <ModalBody>
+      <ModalContent>
         <CloseSpan onClick={onClose}>x</CloseSpan>
         {children}
-      </ModalBody>
+      </ModalContent>
     </ModalContainer>
   );
 };
