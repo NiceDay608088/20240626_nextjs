@@ -7,6 +7,7 @@ import { ContainerDiv, ThemeDiv } from "./styles";
 import AssetIcon from "@/components/AssetIcon";
 import MyModal from "@/components/MyModal/MyModal";
 import { useState } from "react";
+import ComboBox from "@/components/ComboBox/ComboBox";
 
 export default function Home() {
   const [isModalVisible, setModalVisible] = useState(false);
@@ -34,7 +35,7 @@ export default function Home() {
         isVisible={isModalVisible}
         onClose={() => setModalVisible(false)}
       >
-        <div>hehe</div>
+        <ComboBox />
       </MyModal>
     </ContainerDiv>
   );

@@ -24,8 +24,8 @@ export const ModalContent = styled.div`
   width: 700px;
   height: 350px;
   border-radius: 10px;
-  padding: 10px;
-  padding-top: 40px;
+  padding: 30px;
+  padding-top: 50px;
 `;
 
 export const CloseSpan = styled.span`
